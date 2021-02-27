@@ -26,7 +26,7 @@ const BannerDefault = () => {
             >
               <h4>Cloud Native Management</h4>
               <h1>
-                Representing <span>every</span> service mesh out there
+                Representing <span>every</span> service mesh out
               </h1>
             </SectionTitle>
             <p>
