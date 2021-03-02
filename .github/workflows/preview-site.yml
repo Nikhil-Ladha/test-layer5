@@ -16,7 +16,7 @@ jobs:
       - name: Download Site dir
         uses: dawidd6/action-download-artifact@v2
         with:
-          github_token: ${{ secrets.GH_ACCESS_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: build-and-preview-site.yml
           run_id: ${{ github.event.workflow_run.id }}
           name: public-dir
@@ -39,7 +39,7 @@ jobs:
       - name: Netlify Preview URL
         uses: unsplash/comment-on-pr@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets..GITHUB_TOKEN}}
           OUTPUT: "${{ github.event }} ${{ github.ref }} This pull request is being automatically deployed to Netlify.\n\n🔍 Inspect: ${{ steps.deploy-netlify.outputs.NETLIFY_LOGS_URL }}\n✅ Preview: ${{ steps.deploy-netlify.outputs.NETLIFY_URL }}"
         with:
           msg: ${{ env.OUTPUT }}
