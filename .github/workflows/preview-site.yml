@@ -34,7 +34,6 @@ jobs:
           publish-dir: 'public'
           production-deploy: false
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          enable-commit-comment: false
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
@@ -57,7 +56,7 @@ jobs:
       #     check_for_duplicate_msg: false
 
       # - name: Comment Deploy
-      #   uses: ./.github/actions/comment-docs-preview-in-pr
+      #   uses: ./.github/actions/comment-preview-on-pr
       #   with:
       #     token: ${{ secrets.GITHUB_TOKEN }}
       #     deploy_url: "${{ steps.netlify.outputs.deploy-url }}"
