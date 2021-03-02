@@ -61,7 +61,7 @@ if __name__ == "__main__":
         url,
         headers=github_headers,
         json={
-            "body": f"📝 Docs preview for commit {use_pr.head.sha} at: {settings.input_deploy_url}"
+            "body": f"🚀 Preview for commit {use_pr.head.sha} at: {settings.input_deploy_url}"
         },
     )
     if not (200 <= response.status_code <= 300):
